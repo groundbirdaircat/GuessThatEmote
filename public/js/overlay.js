@@ -222,9 +222,8 @@
 
         if (socket.readyState > 1) {
             // higher than one means 
-            // closing or closed, so reconnect
-            console.warn('GTE: socket error')
-            reconnectWS()
+            // closing or closed
+            // should reconnect on its own
             return setTimeout(showNewEmote, 1000)
         }
 
