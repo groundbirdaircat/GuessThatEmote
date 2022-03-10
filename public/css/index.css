@@ -8,6 +8,9 @@ body {
     display: grid;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 0px 0px 15px #FFFFFF;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
 /* Emote */
