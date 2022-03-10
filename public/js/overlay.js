@@ -42,8 +42,8 @@
     }
 
     function setOptions() {
-        // parse query, then set channel username
-        // which emotes to use
+        // parse query, then set channel username,
+        // which emotes to use,
         // and how much time between rounds
         var parsedObj = parseQueryStringToObj()
         options.timeBetweenEmotes = parsedObj.time
@@ -57,7 +57,7 @@
 
     function checkOptionsForErrors() {
         // verify username exists and is regular characters
-        // also  make sure at least 1 emote group is enabled
+        // also make sure at least 1 emote group is enabled
         if (!username || (encodeURI(username).includes('%')) || 
             (!options.useTwitchChannel && 
             !options.useTwitchGlobal &&
@@ -129,6 +129,7 @@
 ///////////////
 // WEBSOCKET //
 ///////////////
+
     // set socket protocol based on location protocol
     var socketProtocol = location.protocol[4] == 's' ? 'wss' : 'ws'
     var socketPort = socketProtocol == 'ws' ? 80 : 443
