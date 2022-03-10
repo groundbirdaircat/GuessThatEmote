@@ -129,9 +129,11 @@
 ///////////////
 // WEBSOCKET //
 ///////////////
-
+    // set socket protocol based on location protocol
+    var socketProtocol = location.protocol[4] == 's' ? 'wss' : 'ws'
+    
     function connectWS() {
-        socket = new WebSocket('ws://irc-ws.chat.twitch.tv:80')
+        socket = new WebSocket(`${socketProtocol}://irc-ws.chat.twitch.tv:80`)
         socket.addEventListener('open', connectTwitch)
         socket.addEventListener('message', readSocketMessage)
         socket.addEventListener('close', reconnectWS)
