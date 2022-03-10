@@ -189,8 +189,11 @@ function generateButtonPressed(){
     if (!textPassed || encodeURI(username).includes('%')) {
         setTextColor(twitchChannelText, 'red')
         if (!checkboxPassed) setTextColor(whichEmotesText, 'red')
-        return
+        return 
     }
+
+    // don't allow clicks when fetching
+    generateButton.disabled = true
 
     // check that twitch username exists
     fetchUsername(username)
@@ -206,7 +209,14 @@ function generateButtonPressed(){
             // forward user if name and checkboxes pass
             if (checkboxPassed) forwardUser()
         }
-        else setTextColor(twitchChannelText, 'red')
+        else {
+            setTextColor(twitchChannelText, 'red')
+            // allow clicking 2 seconds after failed attempt
+            wait(
+                2000,
+                ()=> generateButton.disabled = false
+            )
+        }
     })
 }
 
