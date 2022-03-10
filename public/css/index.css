@@ -1,0 +1,115 @@
+body {
+    background-image: linear-gradient(to right, 
+    black , #0e0e10 40% 60%, black);
+    color: white;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    display: grid;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0px 0px 15px #FFFFFF;
+}
+
+/* Emote */
+#picdiv {
+    height: calc(5vh + 100px);
+    width: calc(50vw + 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4vh;
+    opacity: 0;
+    transition-duration: 0s;
+    transition-property: opacity;
+}
+#mainimg{
+    position: absolute;
+    filter: drop-shadow(0 0 15px white)
+}
+#coverimg{
+    position: absolute;
+    filter: brightness(0);
+    z-index: 1;
+    transition-duration: 0s;
+    transition-timing-function: ease-in;
+    transition-property: opacity;
+    opacity: 1;
+}
+
+/* Title */
+#titlediv {
+    height: calc(3vh + 100px);
+    width: calc(50vw + 100px);
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding-top: 4vh;
+    font-size: 2em;
+}
+#titlediv p {
+    font-size: .5em;
+}
+
+/* Channel */
+#channeldiv {
+    height: calc(7vh + 50px);
+    width: calc(50vw + 100px);
+    display: block;
+    margin: auto;
+    align-items: center;
+    font-size: 1.5em;
+}
+#textinput {
+    text-align: center;
+    width: 200px;
+    height: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 25vmin;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding:1.5vmin;
+    border: 1px solid rgb(50, 50, 50);
+    box-shadow: 0px 0px 20px #777777;
+}
+#textinput::selection {
+    background: #7226ff;
+}
+
+/* Check Boxes */
+#checkboxwrapper {
+    height: auto;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    width: calc(50vw + 100px);
+    align-items: center;
+    font-size: 1.5em;
+}
+#checkboxwrapper p {
+    font-size: .6em;
+}
+.check{
+    box-shadow: 0px 0px 10px #AAAAAA;
+}
+
+/* Generate Btn */
+#generate{
+    background-color: white;
+    border-radius: 100px;
+    height: 45px;
+    width: 150px;
+    box-shadow: 0px 0px 20px #777777;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0px;
+}
+#generate:hover{
+    background-color: #7226ff;
+}
+@media (hover: none) {
+    #generate:hover{
+        background-color: white;
+    }
+}

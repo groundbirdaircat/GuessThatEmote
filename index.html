@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guess That Emote</title>
+        <script src="./public/js/index.js" type="module"></script>
+        <link href="./public/css/index.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="bg"></div>
+        <div id="picdiv">
+            <img src="" id="mainimg">
+            <img src="" id="coverimg">
+        </div>
+        <div id="titlediv">
+            <b>Guess That Emote</b>
+            <p>
+                A minimal browser overlay game for your chat to enjoy
+            </p>
+        </div>
+        <div id="channeldiv">
+            <text id="texttwitchchannel">Your Twitch Channel:</text>
+            <p><input id="textinput" spellcheck="false"></p>
+        </div>
+        <div id="checkboxwrapper">
+            <text id="textwhichemotes">Which emotes to use:</text>
+            <p>Your Twitch Channel &nbsp; <input class="check" checked type="checkbox" id="twchcheckbox"></p>
+            <p>Your FrankerFaceZ &nbsp; <input class="check" type="checkbox" id="ffzcheckbox"></p>
+            <p>Your BetterTTV &nbsp; <input class="check" type="checkbox" id="bttvcheckbox"></p>
+            <p>Your 7TV &nbsp; <input class="check" type="checkbox" id="tv7checkbox"></p>
+            <p>Twitch Global &nbsp; <input class="check" type="checkbox" id="twglcheckbox"></p>
+        </div>
+        <div>
+            Time between emotes:
+            <p><text id="timetext">5 seconds</text></p>
+            <p><input type="range" min="1" max="104" value="5" class="slider" id="timeslider"></p>
+            <p><br><button id="generate">Generate Link</button></p>
+        </div>
+    </body>
+</html>

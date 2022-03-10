@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+body {
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-family: 'Carter One', Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Main Wrap */
+#mainwrapper {
+    position: absolute;
+    opacity: 1;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+}
+
+/* Top Section */
+#toptextwrapper {
+    display:flex;
+    position: relative;
+    height: 20vmin;
+    width: auto;
+    z-index: 1;
+    justify-content: center;
+}
+#emoteText {
+    height: 12vmin;
+    text-align: center;
+    font-size: 12vmin;
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 1vmin #000) 
+            drop-shadow(0px 0px 2vmin #000);
+}
+
+/* Image Section */
+#centerdiv {
+    width: auto;
+    height: 35vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#centerimg {
+    height: inherit;
+    width: auto;
+    max-width: 90vw;
+    /* filter: drop-shadow(0px 0px 5vmin #FFF); */
+    position: relative;
+    object-fit: contain;
+}
+#centerimgcover {
+    height: inherit;
+    width: auto;
+    max-width: 90vw;
+    filter: brightness(0);
+    position: absolute;
+    opacity: 1;
+    transition-timing-function: ease-in;
+    transition-duration: 15s;
+    transition-property: opacity;
+    z-index: 1;
+    object-fit: contain;
+}
+
+/* Bottom Section */
+#bottomtextwrapper {
+    position: relative;
+    height: 15vmin;
+    top: 5vmin;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#winnertext {
+    height: 10vmin;
+    text-align: center;
+    font-size: 10vmin;
+    opacity: 0;
+    font-weight: bold;
+    padding-left: 10vw;
+    filter: drop-shadow(0px 0px 1vmin #000) 
+            drop-shadow(0px 0px 2vmin #000);
+    line-height: 11vmin;
+}
+#clapimg {
+    height: 20vmin;
+    width: 20vmin;
+    position: relative;
+    opacity: 0;
+    bottom: -3vmin;
+    right: -6vmin;
+}
+#timercircle{
+    position: absolute;
+    width: 13vmin;
+    height: 13vmin;
+    color: #bbb;
+    border: 1vmin gray solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 7vmin;
+    transition: opacity 1s;
+    text-shadow: 0px 0px 2vmin #000;
+    box-shadow: 0px 0px 2vmin #000;
+}
