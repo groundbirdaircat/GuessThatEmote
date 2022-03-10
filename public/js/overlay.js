@@ -131,7 +131,7 @@
 ///////////////
     // set socket protocol based on location protocol
     var socketProtocol = location.protocol[4] == 's' ? 'wss' : 'ws'
-    
+
     function connectWS() {
         socket = new WebSocket(`${socketProtocol}://irc-ws.chat.twitch.tv:80`)
         socket.addEventListener('open', connectTwitch)
@@ -259,7 +259,7 @@
 
         // don't use the same emote 
         // twice in a row
-        if (pickedEmote.code == lastEmote?.code) return pickNewEmote()
+        if (pickedEmote.code == lastEmote.code) return pickNewEmote()
         else lastEmote = pickedEmote
 
         return pickedEmote
