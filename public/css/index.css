@@ -89,6 +89,7 @@ body {
 }
 .check{
     box-shadow: 0px 0px 10px #AAAAAA;
+    margin-left: 20px;
 }
 
 /* Generate Btn */
