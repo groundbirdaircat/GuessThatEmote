@@ -91,13 +91,13 @@
     }
 
     function getAllEmotes() {
-        return fetch(
+        fetch(
             `https://bigapi.glitch.me/gte/init/${username}/` +
-            `${Number(options.useTwitchGlobal)}` +
-            `${Number(options.useTwitchChannel)}` +
-            `${Number(options.useBTTV)}` +
-            `${Number(options.useFFZ)}` +
-            `${Number(options.useTV7)}`, 
+            options.useTwitchGlobal +
+            options.useTwitchChannel +
+            options.useBTTV +
+            options.useFFZ +
+            options.useTV7, 
             { method: 'GET' }
         )
 
@@ -108,12 +108,12 @@
 
             // make sure there's emotes
             if (!array.length) {
+                console.warn('GTE: no emotes found (retrying)')
+                
                 // retry with fall off timing
                 emoteAttempt *= 2
-                setTimeout(()=> {
-                        console.warn('GTE: no emotes found (retrying)')
-                        getAllEmotes()
-                    }, 
+                setTimeout(
+                    getAllEmotes, 
                     emoteAttempt*1000
                 )
             }
@@ -303,8 +303,7 @@
             if (!gameState) return
 
             // count down seconds
-            time--
-            timerCircle.innerText = time
+            timerCircle.innerText = --time
 
             // stop loop if time ran out
             if (time < 1) return timeRanOut()
